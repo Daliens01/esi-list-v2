@@ -11,6 +11,7 @@ export default function View({task, error}){
   const [LicenciaturaView, setLicenciaturaView] = React.useState(false);
   const [MaestriaView, setMaestriaView] = React.useState(false);
   const [TallerView, setTallerView] = React.useState(false);
+  const [newTask, setNewTask] = React.useState();
 
   const OpenAlumno = () => setAlumnoView(true);
   const closeAlumno = () => setAlumnoView(false)
@@ -26,10 +27,6 @@ export default function View({task, error}){
 
   const OpenTaller = () => setTallerView(true)
   const CloseTaller = () => setTallerView(false)
-
-  // useState de los add
-
-  const [newTask, setNewTask] = React.useState();
   
   const add = async () =>{
             
