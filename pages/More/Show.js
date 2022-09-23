@@ -3,9 +3,10 @@ import Error from "next/error"
 import { Collapse ,Table, Row, Col, Button, Grid, Text, Modal, Image, Mail, Password, Checkbox, Container, Card } from "@nextui-org/react";
 import {StyledBadge} from "../../Components/Icons/styled"
 export default function View({task, error}){
+  const [visible, setVisible] = React.useState(false);
     const contador = task.link;
     if(error && error.statusCode) return <Error statusCode={error.statusCode} title={error.statusText}/>
-    const [visible, setVisible] = React.useState(false);
+    
     const handler = () => setVisible(true);
 
     const closeHandler = () => {
